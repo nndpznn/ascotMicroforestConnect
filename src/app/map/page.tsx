@@ -49,15 +49,15 @@ export default function MapPage() {
         <div id="forestdetails" className="w-2/7 mx-3">
           <div className="bg-[#DAE1DA] rounded-md w-full h-full min-h-[70vh] p-4">
             {selectedForest ? (
-              <div className="flex flex-col gap-3">
-                <h2 className="font-bold text-xl text-[#244206]">
+              <div className="flex flex-col">
+                <h2 className="font-bold text-3xl mb-1 text-[#244206]">
                   {selectedForest.forestName}
                 </h2>
                 <p className="text-sm text-gray-700">{selectedForest.city}</p>
                 <p className="text-sm text-gray-600">
                   Established {selectedForest.estYear} · {selectedForest.sqft.toLocaleString()} sq ft
                 </p>
-                <p className="text-sm text-gray-700">{selectedForest.blurb}</p>
+                <p className="text-sm text-gray-700 my-2">{selectedForest.blurb}</p>
               </div>
             ) : (
               <p className="text-gray-500 text-sm">Select a forest on the map to view details.</p>

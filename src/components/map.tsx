@@ -38,13 +38,6 @@ export default function Map({ forests, onForestSelect }: MapProps) {
     mapRef.current = map;
 
     map.on('load', () => {
-      map.addSource('terrain-source', {
-        type: 'raster-dem',
-        url: 'https://demotiles.maplibre.org/terrain-tiles/tiles.json',
-        tileSize: 256,
-      });
-      map.setTerrain({ source: 'terrain-source', exaggeration: 1 });
-
       forests.forEach((forest) => {
         const { lng, lat } = forest.coordinates;
         const el = document.createElement('div');
