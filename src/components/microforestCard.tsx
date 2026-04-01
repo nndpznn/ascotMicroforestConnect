@@ -1,4 +1,5 @@
-import type { Forest } from '@/lib/firebase';
+import Link from 'next/link';
+import { forestDetailPath, type Forest } from '@/lib/firebase';
 
 type MicroforestCardProps = {
   forest: Forest;
@@ -6,7 +7,10 @@ type MicroforestCardProps = {
 
 export default function MicroforestCard({ forest }: MicroforestCardProps) {
   return (
-    <div className="bg-[#DAE1DA] rounded-md p-4 flex flex-col">
+    <Link
+      href={forestDetailPath(forest.id)}
+      className="bg-[#DAE1DA] rounded-md p-4 flex flex-col hover:opacity-90 transition-opacity"
+    >
       <div className="mb-3 h-32 w-full rounded-md bg-gray-300" />
       <h2 className="font-bold text-xl text-[#244206] mb-1 truncate">
         {forest.forestName}
@@ -15,7 +19,7 @@ export default function MicroforestCard({ forest }: MicroforestCardProps) {
       <p className="text-sm text-gray-600">
         Established {forest.estYear} · {forest.sqft.toLocaleString()} sq ft
       </p>
-    </div>
+    </Link>
   );
 }
 

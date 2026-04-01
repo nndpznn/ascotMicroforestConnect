@@ -17,11 +17,11 @@ async function handleContact(formData: FormData) {
 export default function ContactPage() {
   return (
     <div className="mx-[5vw]">
-      <h1 className="my-8 text-4xl font-bold">Contact</h1>
+      <h1 className="my-6 text-4xl font-bold">Contact</h1>
 
       <div className="flex">
         <div id="form" className="w-1/2 mx-3">
-          <p className="my-2">Let us know about any opportunities for improvement, any feedback, or compliments :)</p>
+          <p className="my-2">Let us know about any opportunities for improvement, any feedback, or inquiries.</p>
           <form action={handleContact} className="rounded-lg">
             <div className="mb-4">
               <label

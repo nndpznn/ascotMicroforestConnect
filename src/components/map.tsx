@@ -64,7 +64,12 @@ export default function Map({ forests, onForestSelect }: MapProps) {
         marker.setPopup(popup);
 
         el.addEventListener('click', () => {
-          map.flyTo({ center: [lng, lat], zoom: 16 });
+          map.flyTo({
+            center: [lng, lat],
+            zoom: 14,
+            duration: 750,
+            curve: 1.2,
+          });
           marker.togglePopup();
           onForestSelectRef.current?.(forest);
         });

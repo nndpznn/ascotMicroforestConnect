@@ -31,7 +31,7 @@ export default function MicroforestsPage() {
 
   return (
     <div className="mx-[5vw]">
-      <h1 className="my-8 text-4xl font-bold">Micro-Forests</h1>
+      <h1 className="my-6 text-4xl font-bold">Micro-Forests</h1>
 
       {isLoading ? (
         <div className="bg-[#DAE1DA] rounded-md w-full h-48 flex items-center justify-center text-gray-600">

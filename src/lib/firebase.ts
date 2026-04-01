@@ -15,6 +15,11 @@ export type Forest = {
   sqft: number;
 };
 
+/** Firestore document ID (e.g. ascotHills, allSouls) — used in `/forest/[forestId]`. */
+export function forestDetailPath(forestDocumentId: string): string {
+  return `/forest/${forestDocumentId}`;
+}
+
 export async function getForests(): Promise<Forest[]> {
   const res = await fetch('/api/forests');
   if (!res.ok) {
